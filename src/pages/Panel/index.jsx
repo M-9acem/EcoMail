@@ -1,5 +1,5 @@
 import React from 'react';
-import './Panel.css'; // Create a new CSS file for specific styles if not already created
+import './index.css'; // Create a new CSS file for specific styles if not already created
 
 export default function Panel() {
     const handleContinue = () => {
