@@ -2,22 +2,19 @@ import React, { useState } from "react";
 import { Checkbox } from "primereact/checkbox";
 import { Tooltip } from "primereact/tooltip";
 import './index.css';
-import logo from '../../assets/img/logo.svg'; // Adjust the path if necessary
-import "primereact/resources/themes/saga-green/theme.css";  // or another theme you prefer
-import "primereact/resources/primereact.min.css";
-import "primeicons/primeicons.css";
-
-
+import logo from '../../assets/img/logo.svg';
+import Panel from '../../pages/Panel'; // Import the Panel component
 
 export default function Options() {
+    const [selectedFeatures, setSelectedFeatures] = useState([]);
+    const [showPanel, setShowPanel] = useState(false); // State to manage view toggle
+
     const features = [
         { name: 'Unsub from unwanted subs', key: 'U', infoUrl: 'https://example.com/unsub-info' },
         { name: 'Lists update', key: 'L', infoUrl: 'https://example.com/lists-update-info' },
         { name: 'Delete read stored emails after EED', key: 'D', infoUrl: 'https://example.com/delete-read-info' },
         { name: 'Save seen emails locally', key: 'S', infoUrl: 'https://example.com/save-seen-info' },
     ];
-    
-    const [selectedFeatures, setSelectedFeatures] = useState([]);
 
     const onFeatureChange = (e) => {
         let _selectedFeatures = [...selectedFeatures];
@@ -27,6 +24,14 @@ export default function Options() {
 
         setSelectedFeatures(_selectedFeatures);
     };
+
+    const handleValidateClick = () => {
+        setShowPanel(true); // Show Panel component on validate button click
+    };
+
+    if (showPanel) {
+        return <Panel />; // Render Panel component if showPanel is true
+    }
 
     return (
         <div className="options-container">
@@ -53,7 +58,7 @@ export default function Options() {
                 ))}
             </div>
 
-            <button className="validate-button">Validate</button>
+            <button className="validate-button" onClick={handleValidateClick}>Validate</button>
             <Tooltip target=".info-icon" />
         </div>
     );

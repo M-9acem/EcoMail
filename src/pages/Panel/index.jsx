@@ -1,9 +1,19 @@
 import React from 'react';
-import { createRoot } from 'react-dom/client';
+import './Panel.css'; // Create a new CSS file for specific styles if not already created
 
-import Panel from './Panel';
-import './index.css';
+export default function Panel() {
+    const handleContinue = () => {
+        // Define any action for the "Continue" button click
+        alert("Continue button clicked!"); // Example action
+    };
 
-const container = document.getElementById('app-container');
-const root = createRoot(container); // createRoot(container!) if you use TypeScript
-root.render(<Panel />);
+    return (
+        <div className="panel-container">
+            <h1 className="panel-heading">Thank You!</h1>
+            <p className="panel-message">
+                Thank you for your contribution to reducing environmental impact through your actions.
+            </p>
+            <button className="continue-button" onClick={handleContinue}>Continue</button>
+        </div>
+    );
+}
