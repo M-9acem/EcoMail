@@ -3,7 +3,9 @@ import { Checkbox } from "primereact/checkbox";
 import { Tooltip } from "primereact/tooltip";
 import './index.css';
 import logo from '../../assets/img/logo.svg'; // Adjust the path if necessary
-
+import "primereact/resources/themes/saga-green/theme.css";  // or another theme you prefer
+import "primereact/resources/primereact.min.css";
+import "primeicons/primeicons.css";
 
 
 
@@ -44,7 +46,7 @@ export default function Options() {
                             checked={selectedFeatures.some((item) => item.key === feature.key)}
                         />
                         <label htmlFor={feature.key} className="feature-label">{feature.name}</label>
-                        <a href={feature.infoUrl} target="_blank" rel="noopener noreferrer" className="info-icon" data-pr-tooltip="Learn more">
+                        <a href={feature.infoUrl} target="_blank" rel="noopener noreferrer" className="info-icon" data-pr-tooltip="">
                             ℹ️
                         </a>
                     </div>

@@ -3,6 +3,11 @@ import userPhoto from '../../assets/img/userPhoto.png';
 import Options from '../../pages/Options/index.jsx'; // Import the Options component
 import './Popup.css';
 
+import "primereact/resources/themes/saga-green/theme.css";  // or another theme you prefer
+import "primereact/resources/primereact.min.css";
+import "primeicons/primeicons.css";
+
+
 const Popup = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 

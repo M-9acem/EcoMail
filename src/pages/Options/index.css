@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 .options-container {
     display: flex;
     flex-direction: column;
@@ -46,6 +45,34 @@
 .feature-label {
     color: #4caf50;
     font-size: 1em;
+}
+
+/* Force-hide native checkbox to prevent duplication */
+.p-checkbox input[type="checkbox"] {
+    display: none !important;
+}
+
+.p-checkbox-box {
+    border: 2px solid #4caf50 !important;
+    background-color: white !important;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    position: relative; /* Add this to keep the icon centered */
+}
+
+.p-checkbox-box.p-highlight {
+    background-color: #4caf50 !important;
+    border-color: #4caf50 !important;
+}
+
+.p-checkbox-icon {
+    color: white !important;
+    font-size: 16px !important;
+    visibility: visible !important; /* Make sure the icon is visible */
 }
 
 .info-icon {
