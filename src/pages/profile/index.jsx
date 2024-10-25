@@ -1,18 +1,11 @@
-// src/pages/panel/index.jsx
-import React, { useState } from 'react';
-import Profile from '../profile'; // Import the Profile component
-import './index.css';
+import React from 'react';
+import './index.css'; // Create a new CSS file for specific styles if not already created
 
 export default function Panel() {
-    const [showProfile, setShowProfile] = useState(false); // State to toggle view
-
     const handleContinue = () => {
-        setShowProfile(true); // Switch to the Profile component on continue click
+        // Define any action for the "Continue" button click
+        alert("Continue button clicked!"); // Example action
     };
-
-    if (showProfile) {
-        return <Profile />; // Render Profile component if showProfile is true
-    }
 
     return (
         <div className="panel-container">
