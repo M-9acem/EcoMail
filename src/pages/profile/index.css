@@ -1,21 +1,21 @@
-/* Ensure profile-container takes up the full height of the viewport */
+/* Profile container styling */
 .profile-container {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Align content at the top */
+    justify-content: flex-start;
     padding: 20px;
     font-family: Arial, sans-serif;
-    height: 100vh; /* Full viewport height */
-    box-sizing: border-box; /* Ensure padding doesn’t add extra space */
-    margin-top: 0;
+    height: 100vh;
+    box-sizing: border-box;
 }
 
+/* Profile header styling */
 .profile-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding-top: 0;
+    margin-bottom: 15px;
 }
 
 .profile-info {
@@ -53,7 +53,31 @@
     color: #333;
 }
 
-/* Style for any additional message */
+/* Email text styling */
+.user-email {
+    font-size: 1em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Add Account button styling */
+.add-account-button {
+    background-color: white;
+    color: navy;
+    border: 2px solid navy;
+    border-radius: 10px;
+    padding: 8px 16px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.add-account-button:hover {
+    background-color: navy;
+    color: white;
+}
+
 .profile-message {
     margin-top: 20px;
     font-size: 1.1em;

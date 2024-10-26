@@ -27,7 +27,7 @@ const Popup = () => {
           <div className="User-photo-container">
             <img src={userPhoto} className="User-photo" alt="User" />
           </div>
-          <h1 className="User-name">User's Name</h1>
+          <h1 className="User-name">Obito</h1>
           <button className="Login-button" onClick={handleLogin}>
             Log In
           </button>

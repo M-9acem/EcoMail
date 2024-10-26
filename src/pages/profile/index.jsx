@@ -1,7 +1,7 @@
 import React from 'react';
 import './index.css';
-import profilePic from '../../assets/img/user.png'; // Replace with actual path to the profile picture
-import starIcon from '../../assets/img/star.png'; // Replace with actual path to the star icon
+import profilePic from '../../assets/img/user.png'; // Replace with the actual path to the profile picture
+import starIcon from '../../assets/img/star.png'; // Replace with the actual path to the star icon
 
 export default function Profile() {
     return (
@@ -16,7 +16,17 @@ export default function Profile() {
                     <span className="star-count">0</span>
                 </div>
             </div>
-            <p className="profile-message">This is the profile page where you can manage your information.</p>
+            
+            {/* Email section */}
+            <p className="user-email">kacemsoulaymane@gmail.com</p>
+
+            {/* Add Account button */}
+            <button className="add-account-button">+ Add Account</button>
+
+            {/* Encouraging message */}
+            <p className="encouraging-message">Take your first steps into making impactful change!</p>
+            
+            <p className="profile-message">Tip: Click on your profile to see ur stats and rewards ;) </p>
         </div>
     );
 }
