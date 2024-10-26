@@ -17,16 +17,11 @@
   width: 300px;
 }
 
-.User-photo-container {
-  background: white;
-  padding: 5px;
-  border-radius: 50%;
-  margin-bottom: 20px;
-}
+
 
 .User-photo {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   object-fit: cover;
 }
@@ -34,7 +29,7 @@
 .User-name {
   font-size: 1.5em;
   color: #ffffff;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   font-weight: bold;
 }
 
